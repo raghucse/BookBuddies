@@ -1,0 +1,87 @@
+﻿
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <img src="images\profile_default.jpg" height="200" width="200"/>
+        </div>
+        <div class="col-sm-9">
+            <h2>{{vm.user.firstName + " " + vm.user.lastName}}</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-9">
+            <h3>Personal Info:</h3>
+            <form method="post">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="form-group">
+                            <label for="firstName">First name</label>
+                            <input type="text" id="firstName" class="form-control" ng-model="vm.user.firstName" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last name</label>
+                            <input type="text" id="lastName" class="form-control" ng-model="vm.user.lastName" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" class="form-control" ng-model="vm.user.username" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" class="form-control" ng-model="vm.user.password" />
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="bio">Message</label>
+                            <textarea placeholder="Enter you information here"
+                                      name="bio" id="bio" class="form-control" rows="12" cols="16">Hi! I am a grad student at Northeastern University.I am an avid book reader and collector.Check out my collection and feel free to borrow any if you like.
+                            </textarea>
+                        </div>
+                    </div>
+                </div>
+                <h3>Contact Info</h3>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="addressLine1">Address Line 1</label>
+                            <input type="text" name="addressLine1" id="addressLine1" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" name="city" id="city" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="zip">Zip Code</label>
+                            <input type="number" name="zip" id="zip" class="form-control" required />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="addressLine2">Address Line 2</label>
+                            <input type="text" name="addressLine2" id="addressLine2" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State</label>
+                            <input type="text" name="state" id="state" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="number" name="phone" id="phone" class="form-control" required >
+                        </div>
+                    </div>
+                </div>
+
+                <div class = row>
+                    <center><div class="col">
+                        <button class="btn btn-primary" ng-click="vm.saveUser()">Save</button>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button class="btn btn-danger" ng-click="vm.deleteUser()">Delete</button>
+                        </div>
+                    </center>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

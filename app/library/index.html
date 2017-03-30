@@ -1,0 +1,294 @@
+<!--<br>-->
+<!--<div class="form-container">-->
+    <!--<div class="table-responsive">-->
+        <!--<table class="table">-->
+            <!--<thead>-->
+            <!--<tr>-->
+                <!--<th>Title</th>-->
+                <!--<th>Author</th>-->
+                <!--<th>Genre</th>-->
+                <!--<th>Rating</th>-->
+            <!--</tr>-->
+            <!--</thead>-->
+
+            <!--&lt;!&ndash; Table Body&ndash;&gt;-->
+            <!--<tbody>-->
+
+            <!--<tr>-->
+                <!--<td>-->
+                    <!--<input type="text" class="form-control" ng-model="vm.book.name" placeholder="Title"/>-->
+                <!--</td>-->
+
+                <!--<td>-->
+                    <!--<input type="text" class="form-control" ng-model="vm.book.author" placeholder="Author"/>-->
+                <!--</td>-->
+
+                <!--<td>-->
+                    <!--<input type="text" class="form-control" ng-model="vm.book.genre" placeholder="Genre"/>-->
+                <!--</td>-->
+
+                <!--<td>-->
+                    <!--<input type="number" class="form-control"  placeholder="Rating"/>-->
+                <!--</td>-->
+
+                <!--<td>-->
+                    <!--<a ng-click="vm.saveBook()" class="btn btn-block btn-primary"> Add Book </a>-->
+                <!--</td>-->
+            <!--</tr>-->
+            <!--</tbody>-->
+
+        <!--</table>-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--&lt;!&ndash;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+<!--&lt;!&ndash;            Manage Library             &ndash;&gt;-->
+<!--&lt;!&ndash;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+<!--<div class="container ">-->
+    <!--<h4 ><b>Library Manager</b></h4>-->
+
+    <!--&lt;!&ndash; Update Message &ndash;&gt;-->
+    <!--<div ng-if="model.updatedmessage" class="alert alert-success">-->
+        <!--{{model.updatedmessage}}-->
+    <!--</div>-->
+
+    <!--&lt;!&ndash; Heading &ndash;&gt;-->
+    <!--<div class="table-responsive">-->
+        <!--<table class="table table-hover">-->
+
+            <!--&lt;!&ndash; Header for Position&ndash;&gt;-->
+
+            <!--<th>Title-->
+            <!--</th>-->
+
+
+            <!--<th>Author</th>-->
+            <!--<th>-->
+                <!--Genre-->
+            <!--</th>-->
+            <!--<th>-->
+                <!--Rating-->
+            <!--</th>-->
+
+
+
+            <!--<th>Delete Book</th>-->
+
+
+            <!--<tr ng-repeat="x in vm.user.book">-->
+
+
+                <!--&lt;!&ndash;Course&ndash;&gt;-->
+
+                <!--<td>-->
+                    <!--&lt;!&ndash;<select type="string"-->
+                            <!--class="form-control"-->
+                            <!--placeholder="coursename"-->
+                            <!--ng-model="position.course">-->
+
+                        <!--<option ng-repeat="course in model.courses">{{course.coursename}}</option>-->
+
+                    <!--</select>&ndash;&gt;-->
+                    <!--{{x.name}}-->
+                <!--</td>-->
+
+                <!--&lt;!&ndash;Semester&ndash;&gt;-->
+                <!--<td>-->
+
+                    <!--{{x.author}}-->
+                <!--</td>-->
+                <!--<td>{{x.genre}}</td>-->
+                <!--<td>1</td>-->
+
+                <!--&lt;!&ndash;# Positions&ndash;&gt;-->
+
+
+
+
+                <!--&lt;!&ndash;Delete Position Button&ndash;&gt;-->
+                <!--<td>-->
+                    <!--<a class="glyphicon glyphicon-trash makeblack"-->
+                       <!--ng-click=""></a>-->
+                <!--</td>-->
+
+            <!--</tr>-->
+        <!--</table>-->
+    <!--</div>-->
+
+<!--</div>-->
+<br>
+<div class="form-container">
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Genre</th>
+                <th>Rating</th>
+            </tr>
+            </thead>
+
+            <!-- Table Body-->
+            <tbody>
+
+            <tr>
+                <td>
+                    <input type="text" class="form-control" ng-model="vm.book.name" placeholder="Title"/>
+                </td>
+
+                <td>
+                    <input type="text" class="form-control" ng-model="vm.book.author" placeholder="Author"/>
+                </td>
+
+                <td>
+                    <input type="text" class="form-control" ng-model="vm.book.genre" placeholder="Genre"/>
+                </td>
+
+                <td>
+                    <input type="number" class="form-control"  placeholder="Rating"/>
+                </td>
+
+                <td>
+                    <a ng-click="vm.saveBook()" class="btn btn-block btn-primary"> Add Book </a>
+                </td>
+            </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>
+
+<!------------------------------------------------->
+<!--            My Library             -->
+<!------------------------------------------------->
+<div class="container ">
+    <h4 ><b>My Library</b></h4>
+
+    <!-- Update Message -->
+    <div ng-if="model.updatedmessage" class="alert alert-success">
+        {{model.updatedmessage}}
+    </div>
+
+    <!-- Heading -->
+    <div class="table-responsive">
+        <table class="table table-hover">
+
+            <!-- Header for Position-->
+
+            <th>Title
+            </th>
+
+
+            <th>Author</th>
+            <th>
+                Rating
+
+            <th>
+                Genre
+            </th>
+
+            <th>Delete Book</th>
+            <th></th>
+            <th></th>
+
+            <tr ng-repeat="x in vm.user.book">
+
+
+                <!--Course-->
+
+                <td>
+                    <!--<select type="string"
+                            class="form-control"
+                            placeholder="coursename"
+                            ng-model="position.course">
+
+                        <option ng-repeat="course in model.courses">{{course.coursename}}</option>
+
+                    </select>-->
+                    {{x.name}}
+                </td>
+
+                <!--Semester-->
+                <td>
+
+                    {{x.author}}
+                </td>
+
+                <td>1</td>
+
+                <!--# Positions-->
+                <td>{{x.genre}}</td>
+
+
+
+                <!--Delete Position Button-->
+                <td>
+                    <div ng-click="vm.del(x)">
+                        <a class="glyphicon glyphicon-trash makeblack"></a>
+                    </div>
+                </td>
+
+                <td width="200" align="center">
+                    <div ng-if="x.lent === 'Lend'" align="center">
+                        <input type="text" class="form-control" placeholder="lend to" ng-model="x.lentname" value="" style="width: 60%;">
+                    </div>
+                    <div ng-if="x.lent === 'Take Back'" align="center">
+                        <input type="text"  class="form-control" placeholder="lend to"  nd-model="x.lentname" value={{x.lentname}} disabled style="width: 60%;">
+                    </div>
+                </td>
+
+                <td>
+                    <div ng-if="x.lent === 'Lend' ">
+                        <a id="lend" class="btn btn-success" ng-click="vm.change(x)" >{{x.lent}}</a>
+                    </div>
+                    <div ng-if="x.lent === 'Take Back' ">
+                        <a id="take" class="btn btn-danger" ng-click="vm.change(x)" >{{x.lent}}</a>
+                    </div>
+                </td>
+
+                <td>
+
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!------------------------------------------------->
+<!--            Borrowed             -->
+<!------------------------------------------------->
+<div class="container ">
+    <h4 ><b>Borrowed</b></h4>
+
+    <!-- Heading -->
+    <div class="table-responsive">
+        <table class="table table-hover">
+
+            <!-- Header for Position-->
+
+            <th>Title</th>
+            <th>Author</th>
+            <th>Genre</th>
+            <th>Borrowed from</th>
+
+            <tr>
+
+                <td>Open</td>
+                <td>Andre Agassi</td>
+                <td>Biogarphy</td>
+                <td>Sasanka</td>
+
+            </tr>
+
+            <tr>
+
+                <td>The Kite Runner</td>
+                <td>Khaled Hossaini</td>
+                <td>Fiction</td>
+                <td>Raghu</td>
+
+            </tr>
+
+        </table>
+    </div>
+</div>

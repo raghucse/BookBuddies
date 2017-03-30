@@ -1,0 +1,39 @@
+﻿
+
+<%- include('partials/header') %>
+<div class="form-container">
+    <h1><center><font color="#ffffe0 ">Welcome to BookBuddies</font></center></h1>
+    <br>
+    <h4><center><font color="#ffffe0 ">Already have an account?</font></center></h4>
+</div>
+<div class="form-userpwd">
+    <h3><font color="#ffffe0 "><b>Login:</b></font></h3>
+</div>
+<% if(locals.error) { %>
+<div class="alert alert-danger"><%= error %></div>
+<% } %>
+<% if(locals.success) { %>
+<div class="alert alert-success"><%= success %></div>
+<% } %>
+</div>
+<div class="form-userpwd">
+    <form method="post">
+        <div class="form-group">
+            <label for="username"><font color="#ffffe0 ">Username</font></label>
+            <input type="text" name="username" id="username" value="<%= locals.username || '' %>" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="password"><font color="#ffffe0 ">Password</font></label>
+            <input type="password" name="password" id="password" class="form-control" />
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-secondary form-control" style="width:80px">Login</button>
+            <!--  <button type="submit" class="btn btn-secondary" style="padding-left:150px">-->
+            <div class="btn btn-secondary" style="padding-left:30px">
+                <a href="/register" class="form-control">Register
+                </a>
+            </div>
+            <!--  <button class="btn btn-secondary"  onclick="redirect('/register')" style="width:80px">Re</button>-->
+        </div>
+    </form>
+</div>

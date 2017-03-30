@@ -1,0 +1,109 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Search for books you want to read:</h3>
+            <div id="custom-search-input">
+                <div class="input-group col-md-12">
+                    <input ng-model="vm.user.query" type="text" class="form-control input-lg" placeholder="Book Name" />
+                    <span class="input-group-btn">
+                        <button ng-click="vm.searchBooks()" class="btn btn-info btn-lg" type="button">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+
+
+            <!-- Heading -->
+            <div class="table-responsive">
+                <table class="table table-hover">
+
+                    <!-- Header for Position-->
+
+                    <th>BookName
+                    </th>
+
+
+                    <th>Author</th>
+                    <th>
+                        Genre
+
+                    <th>
+                        Rating
+                    </th>
+
+
+                    <th>Owner</th>
+
+
+                    <tr ng-repeat="x in vm.res">
+                        <td>
+                            {{x.book[vm.user.query].name}}
+                        </td>
+
+                        <td>
+                            {{x.book[vm.user.query].author}}
+                        </td>
+
+
+
+                        <td> {{x.book[vm.user.query].genre}}</td>
+
+                        <td>1</td>
+
+                        <td>
+                            {{x.username}}
+                        </td>
+
+
+                        <td >
+
+                                <button type="button" class="glyphicon glyphicon-envelope" data-toggle="modal" data-target="#myModal"></button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="myModal" role="dialog">
+                                        <div class="modal-dialog">
+
+                                            <!-- Modal content-->
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    <h4 class="modal-title">New Message</h4>
+                                                </div>
+
+                                                <div class="modal-body">
+                                                    To {{x.username}}<br><br>
+                                                    <textarea cols="25" rows="3" ng-model="vm.message.text"></textarea>
+                                                    <button type="button" data-dismiss="modal" class="btn btn-default">Send</button>
+                                                </div>
+                                                <div class="modal-footer">
+
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                        <td>
+
+                    </tr>
+                </table>
+            </div>
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
