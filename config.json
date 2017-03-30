@@ -1,5 +1,5 @@
 ﻿{
     "connectionString": "mongodb://localhost:27017/mean-stack-book-buddie",
-    "apiUrl": "https://bookbuddie.herokuapp.com",
+    "apiUrl": "https://bookbuddie.herokuapp.com/api",
     "secret": "REPLACE THIS WITH YOUR OWN SECRET, IT CAN BE ANY STRING"
 }
