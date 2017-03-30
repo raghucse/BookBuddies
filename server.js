@@ -27,6 +27,9 @@ app.get('/', function (req, res) {
 });
 
 // start server
-var server = app.listen(3000, function () {
+
+var port = process.env.PORT || 3000;
+
+var server = app.listen(port, function () {
     console.log('Server listening at http://' + server.address().address + ':' + server.address().port);
 });
